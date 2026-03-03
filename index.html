@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACFO</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-black">
+
+<header class="bg-white border-b border-gray-200 fixed w-full top-0 z-50">
+
+  <nav class="container mx-auto px-4 flex items-center justify-between py-4">
+
+    <!-- MENU GAUCHE (desktop) -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+      <li><a href="#" class="hover:text-gray-900 hover:underline">Boutique</a></li>
+      <li><a href="#" class="hover:text-gray-900 hover:underline">Produits</a></li>
+    </ul>
+
+    <!-- LOGO CENTRÉ -->
+    <div class="text-2xl font-bold tracking-widest">
+      <a href="#" class="text-gray-900 hover:text-gray-700">MACFO</a>
+    </div>
+
+    <!-- MENU DROITE (desktop) -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+      <li><a href="#" class="hover:text-gray-900 hover:underline">À propos</a></li>
+      <li><a href="#" class="hover:text-gray-900 hover:underline">Contact</a></li>
+      <li><a href="#" class="text-gray-700 hover:text-gray-900">Panier</a></li>
+    </ul>
+
+    <!-- BOUTON MOBILE -->
+    <button id="mobile-menu-btn" class="md:hidden p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </nav>
+
+  <!-- MENU MOBILE -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <ul class="flex flex-col px-4 py-4 gap-4 text-sm font-medium text-gray-700">
+      <li><a href="#" class="block py-2 hover:text-gray-900">Boutique</a></li>
+      <li><a href="#" class="block py-2 hover:text-gray-900">Produits</a></li>
+      <li><a href="#" class="block py-2 hover:text-gray-900">À propos</a></li>
+      <li><a href="#" class="block py-2 hover:text-gray-900">Contact</a></li>
+      <li><a href="#" class="block py-2 hover:text-gray-900">Panier</a></li>
+    </ul>
+  </div>
+
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<main class="pt-16">
+
+  <!-- HERO -->
+  <section class="relative bg-gray-900 overflow-hidden" style="background-image: url('public/images/bg.jpg'); background-size: cover; background-position: center bottom; min-height: 80vh;">
+
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <div class="container mx-auto px-4 py-20 md:py-32 relative z-10">
+
+      <h1 class="text-4xl md:text-7xl lg:text-8xl font-extrabold leading-tight max-w-3xl text-white">
+        EVERYDAY LIFE
+      </h1>
+
+      <a href="#"
+         class="inline-block mt-8 bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors">
+        Shop Now
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURE BAR -->
+  <section class="bg-yellow-400">
+    <div class="container mx-auto px-4 py-4">
+      <ul class="flex flex-wrap justify-center gap-8 text-sm font-medium text-gray-900">
+        <li>Free Shipping</li>
+        <li>24/7 Support</li>
+        <li>Money Back Guarantee</li>
+        <li>Secure Payment</li>
+        <li>Premium Quality</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVAL -->
+  <section class="container mx-auto px-4 py-20">
+
+    <header class="mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        New Arrival
+      </h2>
+    </header>
+
+    <div class="grid gap-8 md:grid-cols-2">
+
+      <article class="space-y-4 group cursor-pointer">
+        <div class="overflow-hidden rounded-lg">
+          <img
+            src="public/images/bg.jpg"
+            alt="Winter Jacket Brown"
+            class="w-full object-cover aspect-[4/5] group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg text-gray-900 group-hover:text-gray-600">Winter Jacket</h3>
+          <span class="font-medium text-gray-700">$120</span>
+        </div>
+      </article>
+
+      <article class="space-y-4 group cursor-pointer">
+        <div class="w-full rounded-lg bg-gray-200 aspect-[4/5] flex items-center justify-center">
+<img
+            src="public/images/77b3ad6df601b7a22a064e939c62fa9e.jpg"
+            alt="Winter Jacket Brown"
+            class="w-full object-cover aspect-[4/5] group-hover:scale-105 transition-transform duration-300"
+          />        </div>
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg text-gray-900 group-hover:text-gray-600">Black Jacket</h3>
+          <span class="font-medium text-gray-700">$140</span>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
+
